@@ -1,0 +1,15 @@
+opam-version: "2.0"
+name: "myproject"
+version: "0.1"
+synopsis: "Description of my project"
+maintainer: "Me <my.self@sub.domain>"
+depends: [
+  "ocaml" { build }
+  "ocamlfind" { build }
+  "dune" { build & >= "1.5.0" }
+  "base" { >= "0.12.0" }
+  "alcotest" { with-test }
+]
+build: [
+  ["dune" "build" "-p" name]
+]
